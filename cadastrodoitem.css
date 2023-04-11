@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    background-color: #C1CEDC;
+    width: 1440px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+    "h h"
+    "m m"
+    "f f"
+    ;}
+
+header{
+    grid-area: h;
+    width:100vw;
+    display: flex;
+}
+
+main{
+    font-size:40px;
+    width: 100%;
+    padding-left:90px;
+    display: flex;
+    flex-direction: column;
+}
+
+main> form > legend{
+    font-size:90px;
+    text-align: center;
+}
+
+footer {
+    grid-area: f;
+    background-color: #C1CEDC;
+    width:1500px;
+    height:700px;
+}
+
+.btn-01 input[type="submit"] {
+    background-color:black;
+    color: aliceblue;
+    display: flex;
+    flex-direction:column ;
+    width: 200px;
+    height:40px;
+    border-radius: 30px;
+    font-size: 20px;
+    padding-left:40px;
+    margin-left:240px;
+    position: relative;
+    top:190px;
+}
