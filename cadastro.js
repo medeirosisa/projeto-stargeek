@@ -8,26 +8,25 @@ formulario.onsubmit = (evento) =>{
     if (nome.value == ""){
         mensagem.innerHTML = "<p> Digite seu nome! <p>";
         evento.preventDefault();
-        mensagem.innerHTML = "<p>Digite seu nome ! </p>";
         nome.focus();
         return null;
-    }
- 
-    if (email.value == ""){
-        evento.preventDefault();
-        mensagem.innerHTML = "<p>Digite seu email</p>"
-        email.focus();
-        return null;
-    }
+}
 
-    if (email.value == ""){
-        evento.preventDefault();
-        mensagem.innerHTML = "<p>Digite sua senha</p>"
-        senha.focus();
-        return null;
-    }
+if (email.value == ""){
+    evento.preventDefault();
+    mensagem.innerHTML = "<p>Digite seu email</p>"
+    email.focus();
+    return null;
+}
 
-    let dados = JSON.parse(localStorage.getItem("dados")) || [];
+if (senha.value == ""){
+    evento.preventDefault();
+    mensagem.innerHTML = "<p>Digite sua senha</p>"
+    senha.focus();
+    return null;
+}
+
+let dados = JSON.parse(localStorage.getItem("dados")) || [];
     dados.push({
         nome : nome.value,
         email : email.value,
@@ -40,5 +39,5 @@ formulario.onsubmit = (evento) =>{
 
     setTimeout(()=> {
         window.location.assign("login.html")
-    }, 3000 );
+    }, 3000 );                                               //três segundos ...
 }

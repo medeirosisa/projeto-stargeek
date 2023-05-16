@@ -9,22 +9,27 @@
 </head>
 <body>
 
-     <div class="mensagem">
-      <header>
+
+  
+  
+  <header>
         <img src="img/Property 1=Default.jpg" alt="">
       </header>
+
       <main>
         <h1>
           <legend>cadastro do usuário</legend>
         </h1>
-        <form action="login.html">
-         
+        
+        <div class="mensagem"></div>
+        <form id="formulario">
             <label for>nome</label>
-            <input type="text" id="nome" name="mename" placeholder="digite seu nome...">
+            <input type="text" id="nome" name="nome" placeholder="digite seu nome...">
             <label for>e-mail</label>
-            <input type="e-mail" id="e-mail" name="me-mail" placeholder="digite seu e-mail...">
+            <input type="email" id="email" name="email" placeholder="digite seu e-mail...">
             <label for>Senha</label>
-            <input type="password" id="isenha" name="psenha" placeholder="digite sua senha...">
+            <input type="password" id="senha" name="senha" placeholder="digite sua senha...">
+            <br> <br>
             <input type="submit" value="Cadastrar">
         </form>
       </main>
@@ -34,7 +39,7 @@
         <a href="login.html"> já tenho cadastro</a>
 
       </footer>
-    </div>
+    
       <script src="cadastro.js"></script>
 </body>
 </html>

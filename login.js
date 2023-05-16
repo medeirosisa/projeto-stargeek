@@ -1,4 +1,4 @@
-const mensagem = document.querySelector("mensagem");
+const mensagem = document.querySelector(".mensagem");
 const email = document.getElementById("email");
 const senha = document.getElementById("senha");
 const formulario = document.getElementById("formulario");
@@ -10,9 +10,11 @@ formulario.onsubmit = (evento) => {
         if (elemento.email == email.value && elemento.senha == senha.value)
         {
             evento.preventDefault();
+            window.location.assign("catalogocadastrar.html")
             return true;
         }  else{
-            mensagem.innerHTML="Senha ou E-mail incorreto"
+            evento.preventDefault();
+            mensagem.innerHTML="Senha ou Email incorreto"
         }
     });
 }

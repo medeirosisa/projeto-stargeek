@@ -10,21 +10,17 @@
 .container{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows:10px 10px;
+    grid-template-rows:center;
     grid-template-areas:
     "a f"
     ;
 }
 
- main > form {
-    grid-area: f a;
+main > form {
+    grid-area: f;
     display: flex;
     flex-direction: column;
     justify-content:space-between;
-    margin-bottom: 200px;
-    margin-right:150px;
-    margin-left:center;
-    margin-top:200px;
     padding:50px;
     
 }
@@ -41,12 +37,18 @@ form > input[type="submit"]{
     background-color:#FE255F;
     font-size: 2rem;
     padding: 2px;
-    color: aliceblue;
+    color:beige;
 }
 
 form > label{
      font-size: 2rem;
 }
+
+main > form > h1 {
+    font-size: 40px;
+    font-size: 50px;
+}
+
 
 aside{
     grid-area: a;
@@ -86,7 +88,3 @@ aside{
     display: flex;
 }
 
-main > form > h1 {
-    font-size: 40px;
-    font-size: 50px;
-}
