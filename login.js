@@ -10,8 +10,18 @@ formulario.onsubmit = (evento) => {
         if (elemento.email == email.value && elemento.senha == senha.value)
         {
             evento.preventDefault();
-            window.location.assign("catalogocadastrar.html")
+            let dados  = JSON.parse(sessionStorage.getItem("logado")) || [];
+            dados.push(
+                {
+                    email: email.value
+                }
+            )
+            sessionStorage.setItem("logado", JSON.stringify(dados));
+           
+                window.location.assign("catalogocadastrar.html")
             return true;
+            
+            
         }  else{
             evento.preventDefault();
             mensagem.innerHTML="Senha ou Email incorreto"
